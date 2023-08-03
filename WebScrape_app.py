@@ -11,11 +11,13 @@ my_app = Flask(__name__)
 
 # First page (index.html)
 @my_app.route('/', methods=['GET'])
+@cross_origin()
 def search_page():
     return render_template('index.html')
 
 # Second page (result.html)
 @my_app.route("/review", methods=['GET', 'POST'])  # To handle both GET, POST simultaneously
+@cross_origin()
 def final_page():
     if request.method == 'POST':
         try:
