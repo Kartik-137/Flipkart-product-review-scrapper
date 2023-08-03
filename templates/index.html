@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4e4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .search-container {
+            text-align: center;
+        }
+
+        .search-heading {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .search-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-input {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            width: 300px;
+            outline: none;
+        }
+
+        .search-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h1 class="search-heading">Search Flipkart reviews of a product</h1>
+        <form class="search-form" method="POST" action="/review">
+            <input type="text" class="search-input" name="content" id="content" placeholder="Enter the name of the product">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </div>
+</body>
+</html>

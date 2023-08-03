@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8cffb;
+    }
+
+    .table-users {
+      margin: 20px auto;
+      max-width: 800px;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .table-users .header {
+      font-size: 24px;
+      font-weight: bold;
+      color: #007BFF;
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 2px solid #007BFF;
+    }
+
+    .table-users table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table-users th,
+    .table-users td {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .table-users th {
+      background-color: #007BFF;
+      color: #fff;
+    }
+
+    .table-users tr:nth-child(even) {
+      background-color: #dbfff9f2;
+    }
+
+    .table-users tr:hover {
+      background-color: #f5edf8;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="table-users">
+    <div class="header">Reviews for {{reviews[0]['Product']}}</div>
+
+    <table>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Name</th>
+        <th>Rating</th>
+        <th>Comment Heading</th>
+        <th>Comment description</th>
+        
+      </tr>
+      {% for review in reviews %}
+      <tr>
+        <td>{{review['Sr. No.']}}</td>
+        <td>{{review['Name']}}</td>
+        <td>{{review['Rating']}}</td>
+        <td>{{review['Comment Highlight']}}</td>
+        <td>{{review['Comment']}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+</body>
+
+</html>
